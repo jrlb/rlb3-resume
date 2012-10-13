@@ -1,4 +1,5 @@
 Rlb3Resume::Application.routes.draw do
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

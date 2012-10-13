@@ -127,7 +127,7 @@ $(document).ready(function(){
 					$("#loading").fadeIn();
                     $.ajax({
 						   type: "POST",
-						   url: "process_form.php", // php file with mai function 
+						   url: "/contact",
 						   data: $("#contact").serialize(),   
 						   success: function(msg){
 							   
