@@ -65,8 +65,8 @@ module Rlb3Resume
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => "rlb3.com",
-      :user_name            => "resume@rlb3.com",
+      :domain               => ENV["email_domain"],
+      :user_name            => ENV["email_user"],
       :password             => "rb1993012",
       :authentication       => :plain,
       :enable_starttls_auto => true
