@@ -16,7 +16,6 @@
         
        <ul class="controls">
            <li class="print" title="Print CV"><a id="print" href="#">&nbsp;</a></li>
-           <li class="mail-top" title="Contact Me"><a id="contact-me" href="#contact-div">&nbsp;</a></li>
            <!-- tooltip -->
            <li id="tooltip" class="inactive"><b></b></li>
       </ul>  
@@ -221,32 +220,33 @@
             <p class="contact_success"> <span class="success"> Your message has been sent successfully, we will contact you as soon as possible </span></p>
             <p class="contact_error"> <span class="error"> Your message was not sent because a server error has occurred.</span></p>
             
-            <form action="/contact" method="post" name="contact" id="contact">
+			<%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
             <div>
-               <label for="firstname"> * First name</label>
-               <input class="i-text" type="text" id="firstname" name="firstname">
+				<%= f.label :firstname %>
+				<%= f.text_field :firstname, :class => 'i-text' %>
             </div>  
             <div style="margin-left:10px; margin-right:0;"> 
-               <label for="lastname"> * Last name</label>
-               <input class="i-text" type="text" id="lastname" name="lastname">
+				<%= f.label :lastname %>
+				<%= f.text_field :lastname, :class => 'i-text' %>
             </div>  
-            <div> 
-               <label for="email"> * E&ndash;mail</label>
-               <input class="i-text" type="text" id="email" name="email">
+            <div>
+				<%= f.label :email %>
+				<%= f.text_field :email, :class => 'i-text' %>
             </div>  
             <div style="margin-left:10px; margin-right:0;"> 
-               <label for="phone"> * Phone</label><br>
-               <input class="i-text" type="text" id="phone" name="phone">
+				<%= f.label :phone %>
+				<%= f.text_field :phone, :class => 'i-text' %>
+               
             </div>  
              <p>              
-               <label for="message"> * Message</label>
-               <textarea id="message" name="message" rows="10" cols="40"></textarea>
-            
-            <input class="i-submit" type="submit" id="send" name="send" value="Send Message">
+               <%= f.label :message %>
+			   <%= f.text_area :message %>
+			   <%= f.submit "Send Contact" %>
             </p>
             <div id="loading"> Sending Message ...</div>
             </form>
       </div>
+	  <% end %>
    </div>
 
 

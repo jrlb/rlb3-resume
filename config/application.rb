@@ -67,13 +67,13 @@ module Rlb3Resume
       :port                 => 587,
       :domain               => ENV["email_domain"],
       :user_name            => ENV["email_user"],
-      :password             => "rb1993012",
+      :password             => ENV["email_password"],
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
 
-    config.action_mailer.default_url_options = {
-      :host => "blackgeek.me"
-    }
+    # config.action_mailer.default_url_options = {
+    #   :host => "blackgeek.me"
+    # }
   end
 end

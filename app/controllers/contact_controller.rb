@@ -1,10 +1,6 @@
 class ContactController < ApplicationController
   def create
-    @message = Message.new(firstname: params[:firstname],
-                           lastname: params[:lastname],
-                           email: params[:email],
-                           phone: params[:phone],
-                           message: params[:message])
+    @message = Contact.new(firstname: params[:contact])
 
         if @message.valid?
           ContactsMailer.new_contact(@message).deliver

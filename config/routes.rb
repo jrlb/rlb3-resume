@@ -2,7 +2,7 @@ Rlb3Resume::Application.routes.draw do
   root :to => 'home#index'
   get "home/index"
 
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  match 'contact' => 'contact#create', :as => 'contacts', :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
