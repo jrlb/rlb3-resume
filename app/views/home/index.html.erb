@@ -16,6 +16,7 @@
         
        <ul class="controls">
            <li class="print" title="Print CV"><a id="print" href="#">&nbsp;</a></li>
+		   <li class="mail-top" title="Contact Me"><a id="contact-me" href="#contact-div">&nbsp;</a></li>
            <!-- tooltip -->
            <li id="tooltip" class="inactive"><b></b></li>
       </ul>  
@@ -241,7 +242,7 @@
              <p>              
                <%= f.label :message %>
 			   <%= f.text_area :message %>
-			   <%= f.submit "Send Contact" %>
+			   <%= f.submit "Send Contact", :id => 'send', :class => 'i-submit' %>
             </p>
             <div id="loading"> Sending Message ...</div>
             </form>

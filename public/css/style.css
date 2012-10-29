@@ -103,7 +103,7 @@ a { color:#333; text-decoration:none; }
 #contact textarea:focus  { background:#ffc; }
 #contact input.i-text.error,
 #contact textarea.error { background:#FF9F9F; border:solid 1px red; }
-#contact textarea        { font:.9em Verdana, Arial, Helvetica, sans-serif; width:575px; }
+#contact textarea        { font:.9em Verdana, Arial, Helvetica, sans-serif; width:575px; height:100px}
 #contact label           { font-weight:700; font-size:13px; width:90px;  font-family:Arial, Helvetica, sans-serif;}
 #contact label:after     {content:": ";}
 #contact input.i-submit {  border:solid 1px #CDCDCD; background:#f0eaea; color:#333; padding:5px 10px 5px 10px; margin-top:10px;  }

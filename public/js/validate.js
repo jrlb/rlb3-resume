@@ -37,7 +37,7 @@ Contact Info: pinte_catalin@yahoo.com
 				phone: {
 					required:true,
 					number:true,
-					minlength:10,
+					minlength:20,
 					maxlength:14
 				},
 				email: {
@@ -50,7 +50,7 @@ Contact Info: pinte_catalin@yahoo.com
 					$("#loading").fadeIn();
                     $.ajax({
 						   type: "POST",
-						   url: "process_form.php", // php file with mai function 
+						   url: "/contact",
 						   data: $("#contact").serialize(),   
 						   success: function(msg){
 							   

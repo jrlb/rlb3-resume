@@ -1,9 +1,9 @@
 class ContactController < ApplicationController
   def create
-    @message = Contact.new(firstname: params[:contact])
+    @contact = Contact.new(params[:contact])
 
-        if @message.valid?
-          ContactsMailer.new_contact(@message).deliver
+        if @contact.valid?
+          ContactsMailer.new_contact(@contact).deliver
           render :text => "ok"
         else
           render :text => "error"
