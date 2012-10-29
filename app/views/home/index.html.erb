@@ -224,11 +224,11 @@
 			<%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
 			<div></div>
             <div>
-				<%= f.label :firstname %>
+				<%= f.label :firstname, "First Name" %>
 				<%= f.text_field :firstname, :class => 'i-text', :id => 'firstname' %>
             </div>  
             <div style="margin-left:10px; margin-right:0;"> 
-				<%= f.label :lastname %>
+				<%= f.label :lastname, "Last Name" %>
 				<%= f.text_field :lastname, :class => 'i-text' %>
             </div>  
             <div>
@@ -246,9 +246,8 @@
 			   <%= f.submit "Send Contact", :id => 'send', :class => 'i-submit' %>
             </p>
             <div id="loading"> Sending Message ...</div>
-            </form>
+            <% end %>
       </div>
-	  <% end %>
    </div>
 
 
