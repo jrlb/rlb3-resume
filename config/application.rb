@@ -62,12 +62,16 @@ module Rlb3Resume
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.action_mailer.delivery_method = :smtp
+    
+    config.action_mailer.raise_delivery_errors = true
+
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
-      :domain               => ENV["email_domain"],
-      :user_name            => ENV["email_user"],
-      :password             => ENV["email_password"],
+      :domain               => "rlb3.com",
+      :user_name            => "robert@rlb3.com",
+      :password             => "xXxXxXxXxXx",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }

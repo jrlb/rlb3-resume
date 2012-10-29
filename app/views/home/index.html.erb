@@ -222,6 +222,7 @@
             <p class="contact_error"> <span class="error"> Your message was not sent because a server error has occurred.</span></p>
             
 			<%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
+			<hr />
             <div>
 				<%= f.label :firstname %>
 				<%= f.text_field :firstname, :class => 'i-text' %>
