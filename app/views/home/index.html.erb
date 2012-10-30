@@ -49,38 +49,21 @@
            <h2>Education &amp; Training </h2>
            <ul class="list">
                <li class="arrow-up">&nbsp;</li>
+			   <% @education.each do |edu| %>
                <li>
-                    <h3> West Texas A&amp;M </h3>  <h5> 1993 - 2000 </h5>
+                    <h3> <%= edu.name %> </h3>  <h5> <%= edu.year %> </h5>
                           
                     <div class="description">
-                         Music Education
+                         edu.description						 
                          <ol>
-                              <li>Studies in Music Education</li>
+						 <% edu.education_items.each do |item| %>
+                           <li><%= item.item %></li>
+					     <% end %>
                          </ol>
+						
                     </div>
                </li>
-               <li>
-                    <h3>Houston Community College</h3>  <h5> 2009 - 2011 </h5>
-                          
-                    <p class="description">
-                         Jazz Studies
-                         <ol>
-                              <li>4.0 Grade Point</li>
-                         </ol>
-                    </p>
-               </li>
-               <li>
-                    <h3>RedHat</h3>  <h5> 2002, 2005 </h5>
-                          
-                    <p class="description">
-                         RedHat Training and Certifications
-                         <ol>
-							  <li>Red Hat Certified Engineer Rapid Track Training - 2002, 2005 (RHCE)</li>
-							  <li>Red Hat Certified Technician Rapid Track Training - 2002 (RHCT)</li>
-							  <li>Networking Services Training - 2002</li>
-                         </ol>
-                    </p>
-               </li>
+			   <% end %>
            </ul>     
            <!-- End of Education -->   
       
