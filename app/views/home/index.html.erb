@@ -32,65 +32,16 @@
            <h2>Technical Skills</h2>
            <ul class="list">
                <li class="arrow-up">&nbsp;</li>
+			   <% @technical_skills.each do |skill| %>
                <li>
 
-                    <h3>Perl </h3>  <h5> 12 years </h5>
+                    <h3><%= skill.technology %> </h3>  <h5> <%= skill.years %> </h5>
                           
                     <p class="description">
-						Advanced Perl programming capability.
+						<%= skill.description %>
                     </p>
                </li>
-               <li>
-
-                    <h3>Ruby/Ruby on Rails </h3>  <h5> 3 years </h5>
-                          
-                    <p class="description">
-						Intermediate Ruby/Rails programming capability.
-                    </p>
-               </li>
-               <li>
-                    <h3>HTML &amp; CSS</h3> <h5> 12 years </h5>
-                    <p class="description">
-                         Advanced knowledge of web technologies.
-                    </p>
-               </li>
-               <li>
-                    <h3>MySQL/PostgreSQL</h3>  <h5> 8 years </h5>
-                          
-                    <p class="description">
-						Intermediate database administration/programming capability.
-                    </p>
-               </li>
-               <li>
-
-                    <h3>Javascript &amp; jQuery </h3>  <h5> 7 years </h5>
-                          
-                    <p class="description">
-                         Intermediate javascript programming capability.
-                    </p>
-               </li>
-               <li>
-
-                    <h3>Linux</h3>  <h5> 12 years </h5>
-                          
-                    <p class="description">
-						Advanced Linux administration capability.
-                    </p>
-               </li>
-               <li>
-                    <h3>Git</h3>  <h5> 5 years </h5>
-
-                    <p class="description">
-						Intermediate to advanced git capability.
-                    </p>
-               </li>
-               <li>
-                    <h3>MacOSX/iOS</h3>  <h5> 3 years </h5>
-                          
-                    <p class="description">
-						Intermediate MacOSX/iOS programming capability.
-                    </p>
-               </li>
+               <% end %>
            </ul><!-- End of Technical Skills -->         
 
                
