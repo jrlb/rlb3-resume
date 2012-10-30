@@ -1,194 +1,139 @@
 
 <div id="main">
-   <div id="top-content"><!-- Personal informations  -->
-       <div class="photo-shaddow">
-            <div class="photo-holder"><img src="img/photo.png" alt=""></div>
-       </div>
-       <h1><%= @profile.name %></h1>
-       <h3> <%= @profile.tile %></h3>
-       <p class="top-description">
-          <%= @profile.summary %>
-       </p>
-       
-	   <h4><a href="http://coderwall.com/rlb3"><img alt="Endorse rlb3 on Coderwall" src="http://api.coderwall.com/rlb3/endorsecount.png" /></a></h4>
-       <h4 class="address"> <%= @profile.street %> </h4>
-       <h4 class="phone"> <%= @profile.phone %> </h4>
-       <h4 class="mail"><a href="mailto:<%= @profile.email %>"><%= @profile.email %> </a></h4>
-        
-       <ul class="controls">
-           <li class="print" title="Print CV"><a id="print" href="#">&nbsp;</a></li>
-		   <li class="mail-top" title="Contact Me"><a id="contact-me" href="#contact-div">&nbsp;</a></li>
-           <!-- tooltip -->
-           <li id="tooltip" class="inactive"><b></b></li>
-      </ul>  
-   </div><!-- end of personal informations ( fixed ) -->
-       
-         
-   <!-- Begin Middle content -->   
-   <div id="middle-content">
-      <div class="hr">&nbsp;</div>  
-      
-      <!-- Begin of Technical Skills -->
-           <h2>Technical Skills</h2>
-           <ul class="list">
-               <li class="arrow-up">&nbsp;</li>
-			   <% @technical_skills.each do |skill| %>
-               <li>
+  <div id="top-content"><!-- Personal informations  -->
+    <div class="photo-shaddow">
+      <div class="photo-holder"><img src="img/photo.png" alt=""></div>
+    </div>
+    <h1><%= @profile.name %></h1>
+    <h3> <%= @profile.tile %></h3>
+    <p class="top-description">
+      <%= @profile.summary %>
+    </p>
 
-                    <h3><%= skill.technology %> </h3>  <h5> <%= skill.years %> </h5>
-                          
-                    <p class="description">
-						<%= skill.description %>
-                    </p>
-               </li>
-               <% end %>
-           </ul><!-- End of Technical Skills -->         
+    <h4><a href="http://coderwall.com/rlb3"><img alt="Endorse rlb3 on Coderwall" src="http://api.coderwall.com/rlb3/endorsecount.png" /></a></h4>
+    <h4 class="address"> <%= @profile.street %> </h4>
+    <h4 class="phone"> <%= @profile.phone %> </h4>
+    <h4 class="mail"><a href="mailto:<%= @profile.email %>"><%= @profile.email %> </a></h4>
 
-               
-           <!-- Begin of Education -->
-           <h2>Education &amp; Training </h2>
-           <ul class="list">
-               <li class="arrow-up">&nbsp;</li>
-			   <% @education.each do |edu| %>
-               <li>
-                    <h3> <%= edu.name %> </h3>  <h5> <%= edu.year %> </h5>
-                          
-                    <div class="description">
-                         edu.description						 
-                         <ol>
-						 <% edu.education_items.each do |item| %>
-                           <li><%= item.item %></li>
-					     <% end %>
-                         </ol>
-						
-                    </div>
-               </li>
-			   <% end %>
-           </ul>     
-           <!-- End of Education -->   
-      
-            <!-- Begin of Work experience -->
-           <h2>Work experience </h2>
-                <ul class="list">
-                      <li class="arrow-up">&nbsp;</li>
-                      <li>
-                          <h3> Perl Developer </h3>  <h5> 2006 - PRESENT </h5>
-                          <h6> cPanel, Full-time </h6>
-                         
-                          <p class="description">
-                              Design, implement and test applications based on requirements of desired features for clients. Ensure technical and functional designs meet business requirements.
-                          </p>
-						  <ol>
-							  <li>Lead programmer for account migrations for 3 years.</li>
-							  <li>Implement test suite for MySQL integration.</li>
-							  <li>Lead Designer and Programmer of Database Mapping Project that added in the migration of users from other panels.</li>
-							  <li>Mentored junior level colleagues by providing guidance with development projects.</li>
-							  <li>Delivered technical presentations for fellow application developers within the organization and for outside networking groups.</li>
-							  <li>Built core to custom RPM management system.</li>
-							  <li>Certified SCRUM Master.</li>
-						  </ol>
-                      </li>
-                      <li>
-                          <h3> Programming/System Administration Support Specialist </h3>  <h5> 2004 - 2006</h5>
-                          <h6> WEST TEXAS A&amp;M UNIVERSITY, Canyon, TX, Full-time </h6>
-                          
-                          <p class="description">
-                              Designed web applications for faculty and staff. Maintained web and database servers.
-                          </p>
-						  <ol>
-							  <li>Led conversion to a new document imaging retention system - Most of the programming work done in ruby</li>
-							  <li>Designed web application for student/organizational elections</li>
-							  <li>Training colleagues in Red Hat Linux</li>
-							  <li>Training colleagues in web technologies</li>
-						  </ol>
-                      </li>
-                      <li>
-                          <h3> Web Services Coordinator </h3>  <h5> 2002 - 2004</h5>
-                          <h6> WEST TEXAS A&amp;M UNIVERSITY, Canyon, TX, Full-time </h6>
-                          
-                          <p class="description">
-							  Webmaster for 6000-plus student public university. Maintained web, database, and mail servers. Managed and mentored a staff of 3 employees. Provided oversight and management for departmental budget of $90K+ annually.
-                          </p>
-						  <ol>
-							  <li>Introduced Content Management System that allowed faculty and staff to update their class and organizational websites with ease.</li>
-							  <li>Designed and Implemented Procurement Card System for University Business Office</li>
-							  <li>Managed and mentored a staff of 3 employees Training</li>
-							  <li>Training colleagues in usage of Content Management System</li>
-						  </ol>
-                      </li>
-                      <li>
-                          <h3> Network Programmer/System Administrator </h3>  <h5> 2001 - 2002</h5>
-                          <h6> WEST TEXAS A&amp;M UNIVERSITY, Canyon, TX, Full-time </h6>
-                          
-                          <p class="description">
-                              Administer mail and file servers. Managed DNS servers.
-                          </p>
-						  <ol>
-							<li>Rebuilt Linux based mail server for all faculty, staff and students.</li>
-							<li>Rebuilt Linux based dns server for campus.</li>
-						  	<li>Installed virus scanners on Novell file servers.</li>
-						  </ol>
-                      </li>
+    <ul class="controls">
+      <li class="print" title="Print CV"><a id="print" href="#">&nbsp;</a></li>
+      <li class="mail-top" title="Contact Me"><a id="contact-me" href="#contact-div">&nbsp;</a></li>
+      <!-- tooltip -->
+      <li id="tooltip" class="inactive"><b></b></li>
+    </ul>
+  </div><!-- end of personal informations ( fixed ) -->
 
-           </ul>       		   
-          <!-- End of Work experience -->    
-               
-          <!-- Begin of Get in touch -->
-          <h2 id="get_in_touch">Get in touch !</h2>
-                 <ul class="list">
-				     <li class="arrow-up">&nbsp;</li>
-				     <li>
-					        <ul id="social">
-								<li id="RSS" title="RSS feed"><a href="http://www.rlb3.com/atom.xml"></a></li>
-								<li id="facebook" title="Facebook"><a href="http://www.facebook.com/rboone3"></a></li>
-								<li id="twitter" title="Twitter"><a href="https://twitter.com/rlb3"></a></li>
-							</ul>
-			   
-					 </li>
-           </ul><!-- End of Get in touch -->
-   </div><!-- End of Middle content -->   
-   <div id="bottom-content">&nbsp;</div>
-   
+
+  <!-- Begin Middle content -->
+  <div id="middle-content">
+    <div class="hr">&nbsp;</div>
+
+    <!-- Begin of Technical Skills -->
+    <h2>Technical Skills</h2>
+    <ul class="list">
+      <li class="arrow-up">&nbsp;</li>
+      <% @technical_skills.each do |skill| %>
+      <li>
+
+        <h3><%= skill.technology %> </h3>  <h5> <%= skill.years %> </h5>
+        <p class="description">
+          <%= skill.description %>
+        </p>
+      </li>
+      <% end %>
+    </ul><!-- End of Technical Skills -->
+
+
+    <!-- Begin of Education -->
+    <h2>Education &amp; Training </h2>
+    <ul class="list">
+      <li class="arrow-up">&nbsp;</li>
+      <% @education.each do |edu| %>
+      <li>
+        <h3> <%= edu.name %> </h3>  <h5> <%= edu.year %> </h5>
+        <div class="description">
+          <%= edu.description %>
+          <ol>
+            <% edu.education_items.each do |item| %>
+            <li><%= item.item %></li>
+            <% end %>
+          </ol>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+    <!-- End of Education -->
+
+    <!-- Begin of Work experience -->
+    <h2>Work experience </h2>
+    <ul class="list">
+      <li class="arrow-up">&nbsp;</li>
+      <% @work.each do |work| %>
+      <li>
+        <h3> <%= work.title %> </h3>  <h5> <%= work.year %> </h5>
+        <h6> <%= work.sub_title %> </h6>
+        <p class="description">
+          <%= work.description %>
+        </p>
+        <ol>
+          <% work.work_items.each do |item| %>
+          <li><%= item.item %></li>
+          <% end %>
+        </ol>
+      </li>
+      <% end %>
+    </ul>
+    <!-- End of Work experience -->
+
+    <!-- Begin of Get in touch -->
+    <h2 id="get_in_touch">Get in touch !</h2>
+    <ul class="list">
+      <li class="arrow-up">&nbsp;</li>
+      <li>
+        <ul id="social">
+          <li id="RSS" title="RSS feed"><a href="http://www.rlb3.com/atom.xml"></a></li>
+          <li id="facebook" title="Facebook"><a href="http://www.facebook.com/rboone3"></a></li>
+          <li id="twitter" title="Twitter"><a href="https://twitter.com/rlb3"></a></li>
+        </ul>
+      </li>
+    </ul><!-- End of Get in touch -->
+  </div><!-- End of Middle content -->
+  <div id="bottom-content">&nbsp;</div>
 </div><!-- End of Main -->
 
 
 
-<!-- Hiden contact form  --> 
-   <div style="display:none;">
-     <div id="contact-div">
-            <h2>Online contact</h2> 
-
-            <p class="contact_success"> <span class="success"> Your message has been sent successfully, we will contact you as soon as possible </span></p>
-            <p class="contact_error"> <span class="error"> Your message was not sent because a server error has occurred.</span></p>
-            
-			<%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
-			<div></div>
-            <div>
-				<%= f.label :firstname, "First Name" %>
-				<%= f.text_field :firstname, :class => 'i-text', :id => 'firstname' %>
-            </div>  
-            <div style="margin-left:10px; margin-right:0;"> 
-				<%= f.label :lastname, "Last Name" %>
-				<%= f.text_field :lastname, :class => 'i-text' %>
-            </div>  
-            <div>
-				<%= f.label :email %>
-				<%= f.text_field :email, :class => 'i-text' %>
-            </div>  
-            <div style="margin-left:10px; margin-right:0;"> 
-				<%= f.label :phone %>
-				<%= f.text_field :phone, :class => 'i-text' %>
-               
-            </div>  
-             <p>              
-               <%= f.label :message %>
-			   <%= f.text_area :message %>
-			   <%= f.submit "Send Contact", :id => 'send', :class => 'i-submit' %>
-            </p>
-            <div id="loading"> Sending Message ...</div>
-            <% end %>
-      </div>
-   </div>
-
-
-
+<!-- Hiden contact form  -->
+<div style="display:none;">
+  <div id="contact-div">
+    <h2>Online contact</h2>
+    <p class="contact_success"> <span class="success"> Your message has been sent successfully, we will contact you as soon as possible </span></p>
+    <p class="contact_error"> <span class="error"> Your message was not sent because a server error has occurred.</span></p>
+    <%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
+    <div>
+    </div>
+    <div>
+      <%= f.label :firstname, "First Name" %>
+      <%= f.text_field :firstname, :class => 'i-text', :id => 'firstname' %>
+    </div>
+    <div style="margin-left:10px; margin-right:0;">
+      <%= f.label :lastname, "Last Name" %>
+      <%= f.text_field :lastname, :class => 'i-text' %>
+    </div>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email, :class => 'i-text' %>
+    </div>
+    <div style="margin-left:10px; margin-right:0;">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, :class => 'i-text' %>
+    </div>
+    <p>
+      <%= f.label :message %>
+      <%= f.text_area :message %>
+      <%= f.submit "Send Contact", :id => 'send', :class => 'i-submit' %>
+    </p>
+    <div id="loading"> Sending Message ...</div>
+    <% end %>
+  </div>
+</div>
