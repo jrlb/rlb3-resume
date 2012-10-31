@@ -1,6 +1,6 @@
 
 <div id="main">
-  <div id="top-content"><!-- Personal informations  -->
+  <div id="top-content"><!-- Personal information  -->
     <div class="photo-shaddow">
       <div class="photo-holder"><%= image_tag "me.jpg", :alt => "Robert Boone" %></div>
     </div>
@@ -16,7 +16,7 @@
 	<h4><a href="http://coderwall.com/rlb3"><img alt="Endorse rlb3 on Coderwall" src="http://api.coderwall.com/rlb3/endorsecount.png" /></a></h4>
 
     <ul class="controls">
-      <li class="print" title="Print CV"><a id="print" href="#">&nbsp;</a></li>
+      <li class="print" title="Print Resume"><a id="print" href="#">&nbsp;</a></li>
       <li class="mail-top" title="Contact Me"><a id="contact-me" href="#contact-div">&nbsp;</a></li>
       <!-- tooltip -->
       <li id="tooltip" class="inactive"><b></b></li>
@@ -85,7 +85,7 @@
     </ul>
     <!-- End of Work experience -->
 
-    <!-- Begin of Get in touch -->
+    <!-- Begin of get in touch -->
     <h2 id="get_in_touch">Get in touch !</h2>
     <ul class="list">
       <li class="arrow-up">&nbsp;</li>
@@ -103,13 +103,13 @@
 
 
 
-<!-- Hiden contact form  -->
+<!-- Contact form  -->
 <div style="display:none;">
   <div id="contact-div">
-    <h2>Online contact</h2>
+    <h2>Contact Me</h2>
     <p class="contact_success"> <span class="success"> Your message has been sent successfully, we will contact you as soon as possible </span></p>
     <p class="contact_error"> <span class="error"> Your message was not sent because a server error has occurred.</span></p>
-    <%= form_for @contact, :html => {:id => 'contact', :class => 'contact'} do |f| %>
+    <%= form_for @contact, :html => { :id => 'contact', :class => 'contact' } do |f| %>
     <div>
     </div>
     <div>
