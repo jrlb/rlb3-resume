@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  tile: MyString
+  title: MyString
   summary: MyString
   street: MyString
   phone: MyString
@@ -10,7 +10,7 @@ one:
 
 two:
   name: MyString
-  tile: MyString
+  title: MyString
   summary: MyString
   street: MyString
   phone: MyString
