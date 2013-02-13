@@ -72,7 +72,7 @@ module Rlb3Resume
       :port                 => 587,
       :domain               => "rlb3.com",
       :user_name            => "robert@rlb3.com",
-      :password             => ENV.fetch('RESUME_EMAIL_PASSWORD'),
+      :password             => ENV['RESUME_EMAIL_PASSWORD'],
       :authentication       => :plain,
       :enable_starttls_auto => true
     }

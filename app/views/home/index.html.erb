@@ -77,7 +77,7 @@
         </p>
         <ol>
           <% work.work_items.each do |item| %>
-          <li><%= item.item %></li>
+          <li><%= simple_format(item.item) %></li>
           <% end %>
         </ol>
       </li>
